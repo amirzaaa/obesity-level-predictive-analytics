@@ -439,6 +439,14 @@ Recall (atau sensitivity) mengukur seberapa banyak instance positif yang berhasi
 
 F1-Score adalah rata-rata harmonik dari precision dan recall, memberikan keseimbangan antara keduanya. Dalam gambar, F1-score keseluruhan adalah 0.9127, menunjukkan performa seimbang antara precision dan recall. Per kelas (misalnya, kelas 0: 0.93, kelas 1: 0.79), F1-score membantu mengevaluasi performa model untuk setiap kelas. Formula: `F1 Score = 2 * (Recall*Precission) / (Recall + Precission)` yang menggabungkan kedua metrik untuk skor tunggal, berguna saat distribusi kelas tidak merata.
 
+### Hasil Evaluasi
+
+Hasil evaluasi model Support Vector Classifier (SVC) dalam laporan proyek menunjukkan performa yang sangat baik dalam mengklasifikasikan tingkat obesitas berdasarkan kebiasaan makan dan kondisi fisik.
+
+Dengan akurasi 0,9700 (97%) dan 0,9115 (91,15%), model SVC menunjukkan kemampuan untuk memprediksi dengan akurat data pelatihan dan pengujian.  Model dapat digeneralisasikan dengan baik pada data baru karena tidak mengalami overfitting atau underfitting, seperti yang ditunjukkan oleh perbedaan kecil antara ketepatan pengajaran dan pengujian.  Selain itu, precision keseluruhan sebesar 0.9151 (91.51%) menunjukkan bahwa 91.51% dari prediksi positif model benar, sedangkan recall sebesar 0.9115 (91.15%) menunjukkan bahwa model berhasil menemukan 91.15% dari semua kasus positif yang ada.  Bahkan pada dataset dengan distribusi kelas yang berbeda, model beroperasi secara konsisten, menunjukkan F1-score sebesar 0,9127 (91.27%), yang menunjukkan keseimbangan yang baik antara precision dan recall.
+
+Model SVC terbukti lebih baik daripada Random Forest (dengan test accuracy 0.8756, overfitting) dan Gradient Boosting Classifier (dengan test accuracy 0.8373, juga overfitting).  Performa SVC yang konsisten di semua kelas menunjukkan bahwa model ini dapat diandalkan untuk mengklasifikasikan dengan akurat tingkat obesitas. Ini mendukung tujuan proyek untuk membantu merancang intervensi gaya hidup yang dapat disesuaikan untuk menurunkan risiko obesitas dengan membuat intervensi yang disesuaikan.  Performa tidak terpengaruh secara signifikan oleh distribusi kelas yang tidak merata (support berkisar dari 53 hingga 70). Ini karena metode seperti stratifikasi saat pembagian data dan PCA untuk reduksi dimensi, yang membantu model menemukan pola penting tanpa bias.
+
 
 
 
