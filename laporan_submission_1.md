@@ -362,14 +362,14 @@ Kode tersebut membuat model Random Forest Classifier yang memiliki `n_estimators
 Untuk tugas klasifikasi, Gradient Boosting Classifier adalah algoritma pembelajaran mesin berbasis kelompok.  Algoritma ini bekerja dengan membangun serangkaian pohon keputusan secara berurutan. Setiap pohon memperbaiki kesalahan prediksi dari pohon sebelumnya dengan menggunakan teknik penurunan gradient untuk meminimalkan fungsi kerugian.  Untuk menghasilkan output akhir yang lebih akurat, GBC menggabungkan prediksi dari semua pohon dengan bobot tertentu.  Meskipun algoritma ini efektif untuk data yang kompleks, ia sensitif terhadap perubahan parameter dan dapat memakan waktu komputasi yang lebih lama daripada Random Forest.
 
 - Kelebihan:
-   -Akurasi tinggi karena membangun pohon secara berurutan untuk memperbaiki kesalahan.
-   -Efektif untuk dataset kompleks dengan pola non-linear.
-   -Fleksibel dengan berbagai fungsi kerugian dan optimasi parameter.
+   - Akurasi tinggi karena membangun pohon secara berurutan untuk memperbaiki kesalahan.
+   - Efektif untuk dataset kompleks dengan pola non-linear.
+   - Fleksibel dengan berbagai fungsi kerugian dan optimasi parameter.
 
 - Kekurangan:
-   -Sensitif terhadap parameter (misalnya, learning rate, jumlah pohon), risiko overfitting jika tidak disetel dengan baik.
-   -Waktu pelatihan lebih lama dibandingkan Random Forest.
-   -Rentan terhadap noise dalam data.
+   - Sensitif terhadap parameter (misalnya, learning rate, jumlah pohon), risiko overfitting jika tidak disetel dengan baik.
+   - Waktu pelatihan lebih lama dibandingkan Random Forest.
+   - Rentan terhadap noise dalam data.
 
 ```
 gbc = GradientBoostingClassifier(n_estimators=300,
@@ -380,7 +380,7 @@ gbc = GradientBoostingClassifier(n_estimators=300,
 gbc.fit(X_train_pca, y_train)
 ```
 
-Kode tersebut membuat model Classifier Gradient Boosting dengan `n_estimators=30` (membuat 300 pohon keputusan), random_state=42 (membuat tanaman acak untuk konsistensi), `learning_rate=0.05` (mengatur kontribusi setiap pohon terhadap prediksi akhir), dan `max_features=5` (membatasi jumlah fitur yang dipertimbangkan untuk setiap pohon menjadi 5).  Model dilatih dengan fungsi `gbc.fit(X_train_pca, y_train)` pada data pelatihan `X_train_pca`, yang merupakan data fitur yang telah direduksi dimensinya dengan PCA, dan label `y_train`. Ini memungkinkan model untuk memprediksi kelas berdasarkan pola dalam data.
+Kode tersebut membuat model Classifier Gradient Boosting dengan `n_estimators=300` (membuat 300 pohon keputusan), `random_state=42` (membuat tanaman acak untuk konsistensi), `learning_rate=0.05` (mengatur kontribusi setiap pohon terhadap prediksi akhir), dan `max_features=5` (membatasi jumlah fitur yang dipertimbangkan untuk setiap pohon menjadi 5).  Model dilatih dengan fungsi `gbc.fit(X_train_pca, y_train)` pada data pelatihan `X_train_pca`, yang merupakan data fitur yang telah direduksi dimensinya dengan PCA, dan label `y_train`. Ini memungkinkan model untuk memprediksi kelas berdasarkan pola dalam data.
 
 ### 3. Support Vector Classifier
 
