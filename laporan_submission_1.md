@@ -365,7 +365,8 @@ Untuk tugas klasifikasi, Gradient Boosting Classifier adalah algoritma pembelaja
    -Akurasi tinggi karena membangun pohon secara berurutan untuk memperbaiki kesalahan.
    -Efektif untuk dataset kompleks dengan pola non-linear.
    -Fleksibel dengan berbagai fungsi kerugian dan optimasi parameter.
--Kekurangan:
+
+- Kekurangan:
    -Sensitif terhadap parameter (misalnya, learning rate, jumlah pohon), risiko overfitting jika tidak disetel dengan baik.
    -Waktu pelatihan lebih lama dibandingkan Random Forest.
    -Rentan terhadap noise dalam data.
@@ -385,11 +386,12 @@ Kode tersebut membuat model Classifier Gradient Boosting dengan `n_estimators=30
 
 Untuk menangani tugas klasifikasi, Support Vector Classifier (SVC) adalah algoritma pembelajaran mesin berbasis Support Vector Machine (SVM).  Hyperplane terbaik yang memisahkan kelas-kelas dalam data dengan margin terbesar—jarak terbesar antara hyperplane dan titik data (support vectors) terdekat—adalah cara SVC bekerja.  Ketika data tidak dapat dipisahkan secara linear, SVC menggunakan fungsi kernel (seperti fungsi basis radial atau "rbf") untuk memetakan mereka ke ruang dimensi yang lebih besar agar dapat dipisahkan.  Meskipun SVC efektif untuk dataset yang memiliki fitur yang kompleks, data besar dapat membutuhkan waktu komputasi yang lebih lama.
 
--Kelebihan:
+- Kelebihan:
    - Efektif untuk dataset dengan margin pemisahan jelas atau data non-linear (dengan kernel seperti RBF).
    - Cocok untuk data berdimensi tinggi dengan generalisasi yang baik.
    - Hasil konsisten dengan margin maksimum.
--Kekurangan:
+
+- Kekurangan:
    - Skalabilitas buruk untuk dataset besar karena kompleksitas komputasi tinggi.
    - Memerlukan penskalaan data dan sensitif terhadap ketidakseimbangan kelas.
    - Sulit diinterpretasikan dibandingkan algoritma berbasis pohon.
@@ -405,11 +407,11 @@ Kode tersebut membuat model SVC dengan `kernel='rbf'`, `probability=True` (menga
 
 Setelah melakukan pemodelan dengan menggunakan algoritma machine laerning yang akan digunakan, berikut ini adalah algoritma terbaik yang akan digunakan.
 
-![image](https://github.com/user-attachments/assets/f9b0f124-8a0e-4a55-aadc-52b428f481ab)
-![image](https://github.com/user-attachments/assets/dddd17e9-bc20-46ac-85a8-dc0563f78818)
+![image](https://github.com/user-attachments/assets/94564bc1-3b25-4f30-8544-1b344b63179b)
+![image](https://github.com/user-attachments/assets/a2b44301-cf96-4d9b-a984-f9b9ffb2286d)
 ![image](https://github.com/user-attachments/assets/3326a2a6-583e-4323-aac7-6a61d57e50ce)
 
-Dari hasil diatas, algoritma Random Forest memiliki train accuracy sebesar 1.0000 dan test accuracy sebesar 0.8756, yang menandakan bahwa model tersebut overfit. Kemudian untuk model GBC, memiliki train accuracy sebesar 1.0000 dan test accuracy 0.8373 yang menandakan bahwa model ini juga overfit. Lalu untuk model SVC memiliki train accuracy sebesar 0.9700 dan test accuracy 0.9115, yang menandakan bahwa model ini terlatih dan teruji dengan sangat baik. Model tidak mengalami overfit ataupun underfit.
+Dari hasil diatas, algoritma Random Forest memiliki train accuracy sebesar 0.9994 dan test accuracy sebesar 0.8684, yang menandakan bahwa model tersebut overfit. Kemudian untuk model GBC, memiliki train accuracy sebesar 1.0000 dan test accuracy 0.8373 yang menandakan bahwa model ini juga overfit. Lalu untuk model SVC memiliki train accuracy sebesar 0.9700 dan test accuracy 0.9115, yang menandakan bahwa model ini terlatih dan teruji dengan sangat baik. Model tidak mengalami overfit ataupun underfit.
 
 ![image](https://github.com/user-attachments/assets/9b0bb50a-feca-4af5-990b-f28c5e89810e)
 
